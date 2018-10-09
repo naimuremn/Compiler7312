@@ -1,0 +1,132 @@
+//This code mainly identify the text and match with given input
+//code here
+
+package assignment;
+
+import java.util.Scanner
+public class Assignment {
+
+   
+    public static void main(String[] args) {
+        
+        String[] key = {"int", "if", "byte", "long", "String", "double", "else", "switch", "float"};
+                String[] iden = {"a", "b", "c", "d", "e"};
+                String[] oper = {"-", " +", "/","=", "*"};
+                String[] opera = {"<", ">", "&&", "||", "!=", "=="};
+                String[] value = {"1", "2", "3", "4", "5", "6", "7", "8"};
+                String[] other = {"{", "}", ";", ")", "(", ","};
+                
+                String text="";
+                
+                Scanner in = new Scanner(System.in);
+                System.out.println("Enetr your input plz ");
+                text = in.nextLine();
+                
+                String[] tx = text.split(" ");
+                
+                for (int i = 0; i < tx.length; i++) {
+                    for (int j = 1; j < tx.length; j++) {
+                        if(tx[i].equals(tx[j]))
+                            tx[j]=""; 
+                       // System.out.println(tx[j]);
+                       //System.out.println(tx[i]);
+                    }   
+                }
+                
+                 
+              System.out.println("KEYWORD");
+                for (int i = 0; i < tx.length; i++) {
+                    for (int j = 0; j < key.length; j++) {
+                        if(tx[i].equals(key[j])){
+                            System.out.println("" + tx[i] + ",");
+                        }
+                        
+                    }
+         }
+                
+                
+                  System.out.println("identifier");
+                for (int i = 0; i < tx.length; i++) {
+                    for (int j = 0; j < iden.length; j++) {
+                        if(tx[i].equals(key[j])){
+                            System.out.println("" );
+                        }
+                        
+                    }
+         }
+                
+                      System.out.println("operator");
+                for (int i = 0; i < tx.length; i++) {
+                    for (int j = 0; j < oper.length; j++) {
+                        if(tx[i].equals(key[j])){
+                            System.out.println("" + tx[i] + ",");
+                        }
+                        
+                    }
+         }
+           
+                
+               System.out.println("operand");
+                
+                for (int i = 0; i < tx.length; i++) {
+                    for (int j = 0; j < opera.length ; j++) {
+                        if(tx[i].equals(opera[j]))
+                        {
+                            System.out.println("" + tx[i] + ",");
+                        }
+                        
+                    }
+        
+         }
+                
+             
+                System.out.println("value");
+                         for (int i = 0; i < tx.length; i++) {
+                    for (int j = 0; j < value.length ; j++) {
+                        if(tx[i].equals(value[j]))
+                        {
+                            System.out.println("" + tx[i] + ",");
+                        }
+                        
+                    }
+        
+         }
+                      System.out.println("\nother");   
+                     for (int i = 0; i < tx.length; i++) {
+                    for (int j = 0; j < other.length ; j++) {
+                        if(tx[i].equals(other[j]))
+                        {
+                            System.out.println("" + tx[i] + ",");
+                        }
+                        
+                    }
+        
+         }
+        
+        
+        
+        
+    }
+    
+}
+
+
+
+*/OUTPUT:
+Enetr your input plz 
+int a +
+KEYWORD
+int,
+identifier
+int,
+operator
+int,
+operand
+value
+
+other
+*/
+
+
+
+
